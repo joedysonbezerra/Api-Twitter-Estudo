@@ -11,6 +11,8 @@ routes.post('/signin', controllers.authController.signin);
 // para saber se o user está autenticado
 routes.use(authMiddlewares);
 
+routes.put('/users', controllers.userController.update);
+
 routes.post('/tweets', controllers.tweetController.create);
 routes.delete('/tweets/:id',controllers.tweetController.destroy)
 
