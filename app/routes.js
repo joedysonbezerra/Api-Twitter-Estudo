@@ -13,6 +13,9 @@ routes.use(authMiddlewares);
 
 routes.put('/users', controllers.userController.update);
 
+routes.post('/follow/:id', controllers.followController.create);
+routes.delete('/unfollow/:id', controllers.followController.destroy);
+
 routes.post('/tweets', controllers.tweetController.create);
 routes.delete('/tweets/:id',controllers.tweetController.destroy)
 
