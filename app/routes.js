@@ -12,6 +12,7 @@ routes.post('/signin', controllers.authController.signin);
 routes.use(authMiddlewares);
 
 routes.put('/users', controllers.userController.update);
+routes.get('/users/me', controllers.userController.me);
 
 routes.post('/follow/:id', controllers.followController.create);
 routes.delete('/unfollow/:id', controllers.followController.destroy);
