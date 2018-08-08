@@ -13,6 +13,7 @@ routes.use(authMiddlewares);
 
 routes.put('/users', controllers.userController.update);
 routes.get('/users/me', controllers.userController.me);
+routes.get('/feed', controllers.userController.feed);
 
 routes.post('/follow/:id', controllers.followController.create);
 routes.delete('/unfollow/:id', controllers.followController.destroy);
